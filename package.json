@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "solve": "node src/scrape.js",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "nodemon": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
