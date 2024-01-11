@@ -1,6 +1,6 @@
-import { readWords } from "./words.js";
-import { Session } from "./session.js";
-import { feedback } from "./feedback.js";
+const { readWords } = require("./words.js");
+const { Session } = require("./session.js");
+const { feedback } = require("./feedback.js");
 
 (async () => {
   const runs = 100;
@@ -39,5 +39,5 @@ import { feedback } from "./feedback.js";
       }
     }
   }
-  console.log(`Used ${totalAttempts / runs} attempts in average`);
+  console.log(`Used ${totalAttempts / runs} attempts on average`);
 })();

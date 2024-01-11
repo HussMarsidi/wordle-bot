@@ -2,10 +2,9 @@
   "name": "wordle_solver",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/index.js",
-  "type": "module",
   "scripts": {
-    "solve": "node src/scrape.js"
+    "solve": "node src/scrape.js",
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
