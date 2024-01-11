@@ -5,7 +5,7 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "solve": "node src/index.js"
+    "solve": "node index.js"
   },
   "author": "",
   "license": "ISC",

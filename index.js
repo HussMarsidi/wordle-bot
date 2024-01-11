@@ -2,9 +2,9 @@ import puppeteer from "puppeteer";
 // import { PuppeteerScreenRecorder } from 'puppeteer-screen-recorder'
 import moment from "moment";
 
-import { readWords } from "./words.js";
-import { Session } from "./session.js";
-import { feedback } from "./feedback.js";
+import { readWords } from "./src/words.js";
+import { Session } from "./src/session.js";
+import { feedback } from "./src/feedback.js";
 
 (async () => {
   const browser = await puppeteer.launch({
