@@ -5,13 +5,18 @@
   "main": "./src/index.js",
   "type": "module",
   "scripts": {
-    "solve": "node index.js"
+    "solve": "node src/scrape.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.18.2",
     "moment": "^2.29.4",
+    "node-cron": "^3.0.3",
     "puppeteer": "^17.1.3",
     "puppeteer-screen-recorder": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   }
 }
