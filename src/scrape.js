@@ -6,7 +6,7 @@ const { readWords } = require("./words.js");
 const { Session } = require("./session.js");
 const { feedback } = require("./feedback.js");
 
-const scrape = async (res) => {
+const scrape = async () => {
   const browser = await puppeteer.launch({
     headless: true,
     defaultViewport: null,
@@ -17,6 +17,8 @@ const scrape = async (res) => {
   // const recorder = new PuppeteerScreenRecorder(page);
   await page.setDefaultNavigationTimeout(0);
   await page.goto("https://www.nytimes.com/games/wordle/index.html");
+
+  console.log("Load nytimes wordle page");
 
   const playBtn = await page.waitForSelector(
     "body > div > div > div > div > div > div.Welcome-module_buttonContainer__K4GEw > button.Welcome-module_button__ZG0Zh"
@@ -62,10 +64,9 @@ const scrape = async (res) => {
         break;
       }
     }
-    res.send(`Today's word is ${finalWord}`);
+    return finalWord;
   } catch (error) {
-    console.log(error);
-    res.send("Error occurred");
+    throw `Error occurred, please try again later. ${error}`;
   } finally {
     //   await page.waitForTimeout(3 * 1000);
     // await recorder.stop()

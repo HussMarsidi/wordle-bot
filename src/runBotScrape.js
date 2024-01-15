@@ -6,6 +6,8 @@ const { readWords } = require("./words.js");
 const { Session } = require("./session.js");
 const { feedback } = require("./feedback.js");
 
+const conf = new Object();
+
 const scrape = async (res) => {
   const browser = await puppeteer.launch({
     headless: true,
