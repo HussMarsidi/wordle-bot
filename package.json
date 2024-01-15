@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "solve": "node src/scrape.js",
+    "solve": "node src/runBot.js",
     "start": "node index.js",
     "nodemon": "nodemon index.js"
   },

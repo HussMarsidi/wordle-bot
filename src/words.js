@@ -1,9 +1,11 @@
 const fs = require("fs");
 const readline = require("readline");
+const path = require("path");
 
 const readWords = async () => {
   const words = [];
-  const stream = fs.createReadStream("/usr/share/dict/words");
+  const txtPath = path.join(__dirname, "textDumps.txt");
+  const stream = fs.createReadStream(txtPath);
   const rl = readline.createInterface({
     input: stream,
     crlfDelay: Infinity,
