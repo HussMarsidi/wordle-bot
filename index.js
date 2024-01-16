@@ -17,12 +17,7 @@ app.get("/", (req, res) => {
     "3 0 * * *",
     async () => {
       try {
-        await scrape().then(async (answer) => {
-          console.log("answer", answer);
-          getHints().then(({ hints }) => {
-            console.log("hints", hints);
-          });
-        });
+        await scrape();
       } catch (error) {
         console.log("Something went wrong", error);
       }
