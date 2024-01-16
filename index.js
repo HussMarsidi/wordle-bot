@@ -14,7 +14,7 @@ app.get("/scrape", (req, res) => {
 app.get("/", (req, res) => {
   // run every 12.56AM
   cron.schedule(
-    "45 7 * * *",
+    "7 8 * * *",
     async () => {
       try {
         await scrape().then(async (answer) => {
