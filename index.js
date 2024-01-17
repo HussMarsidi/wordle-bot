@@ -28,6 +28,10 @@ app.get("/", (req, res) => {
     }
   );
 
+  cron.schedule("10 * * * *", () => {
+    console.log("Im alive :)");
+  });
+
   res.send("running cron job");
 });
 
