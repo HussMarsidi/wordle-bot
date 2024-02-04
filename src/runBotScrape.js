@@ -10,7 +10,8 @@ const conf = new Object();
 
 const scrape = async (res) => {
   const browser = await puppeteer.launch({
-    headless: true,
+    executablePath: '/Applications/Chromium.app/Contents/MacOS/Chromium', // should be added for m2 mac
+    headless: false,
     defaultViewport: null,
     args: ["--disable-infobars", "--start-maximized", "--kiosk"],
   });
@@ -27,7 +28,8 @@ const scrape = async (res) => {
 
   // enter into the game, show popup
   await page.waitForTimeout(1000);
-  const closeBtn = await page.waitForSelector("#help-dialog > div > button.Modal-module_closeIcon__TcEKb");
+  const closeBtn = await page.waitForSelector("#help-dialog > div > div > button.Modal-module_closeIcon__TcEKb");
+
   await closeBtn.click();
 
   await page.waitForTimeout(1000);
