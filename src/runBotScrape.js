@@ -11,7 +11,7 @@ const conf = new Object();
 const scrape = async (res) => {
   const browser = await puppeteer.launch({
     executablePath: '/Applications/Chromium.app/Contents/MacOS/Chromium', // should be added for m2 mac
-    headless: false,
+    headless: true,
     defaultViewport: null,
     args: ["--disable-infobars", "--start-maximized", "--kiosk"],
   });
